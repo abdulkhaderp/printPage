@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PrintPage -Plugin Demo</title>
+    <link rel="styleSheet" href="css/demo.css"></link>
+    <script src="../src/lib/jquery-2.1.1.js"></script>
+    <script src="../src/js/printPage.js"></script>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <h2 style="">PrintPage - Plugin Demo<hr></h2>
+		<!-- Button to print the whole page-->
+        <input class="ignore-print btn" type="button" onclick="printAll()" value="Print Full Page">
+        <div class="top">
+			<!-- Element with an image and a button to print the image-->
+            <div id="left-section">
+                <div class="img" ></div>
+				<!-- Call the printImage() to print the image on click of the button-->
+                <input class="ignore-print btn" type="button" onclick="printImage()" value="Print Image"></input>
+            </div>
+
+			<!-- Element with some texts and button to print the texts-->
+            <div id="right-section" >
+                <div class="text-block" ><b>Some text to print</b>
+                </div>
+				<!-- Call the printText() to print the text on click of this button-->
+                <input type="button" onclick="printText()" value="Print Text" class="ignore-print btn"></input>
+            </div>
+        </div>
+		
+		<!-- Element with SVG and a button to print the SVG-->
+        <div id="bottom" >
+            <svg width="577" height="194" class="line-chart" style="margin: 5px;">
+                <g class="y axis yAxis" style="display:block" transform="translate(56,0)">
+                    <g class="tick major" transform="translate(0,118.03999999999999)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel0" transform="translate( -3 ,-3)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">0</text>
+                    </g>
+                    <g class="tick major" transform="translate(0,105.32941176470587)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel1" transform="translate( -3 ,0)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">20M</text>
+                    </g>
+                    <g class="tick major" transform="translate(0,92.61882352941176)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel2" transform="translate( -3 ,0)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">40M</text>
+                    </g>
+                    <g class="tick major" transform="translate(0,79.90823529411765)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel3" transform="translate( -3 ,0)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">60M</text>
+                    </g>
+                    <g class="tick major" transform="translate(0,67.19764705882352)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel4" transform="translate( -3 ,0)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">80M</text>
+                    </g>
+                    <g class="tick major" transform="translate(0,54.48705882352941)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel5" transform="translate( -3 ,0)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">100M</text>
+                    </g>
+                    <g class="tick major" transform="translate(0,41.776470588235284)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel6" transform="translate( -3 ,0)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">120M</text>
+                    </g>
+                    <g class="tick major" transform="translate(0,29.065882352941173)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel7" transform="translate( -3 ,0)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">140M</text>
+                    </g>
+                    <g class="tick major" transform="translate(0,16.35529411764705)" style="opacity: 1;">
+                        <line x2="0" y2="0"></line>
+                        <text x="-3" y="0" dy=".32em" id="aq-visits-container-all-ylabel8" transform="translate( -3 ,0)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">160M</text>
+                    </g>
+                    <path class="domain" d="M0,10H0V118.03999999999999H0"></path>
+                </g>
+                <g class="x axis xAxis" transform="translate(0,118.03999999999999)" style="display:block">
+                    <g class="tick major" transform="translate(79.0909090909091,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">FEB-2013</text>
+                        <title>FEB-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(102.18181818181819,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">MAR-2013</text>
+                        <title>MAR-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(125.27272727272728,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">APR-2013</text>
+                        <title>APR-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(148.36363636363637,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">MAY-2013</text>
+                        <title>MAY-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(171.45454545454544,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">JUN-2013</text>
+                        <title>JUN-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(194.54545454545456,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">JUL-2013</text>
+                        <title>JUL-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(217.63636363636363,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">AUG-2013</text>
+                        <title>AUG-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(240.72727272727272,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">SEP-2013</text>
+                        <title>SEP-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(263.8181818181818,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">OCT-2013</text>
+                        <title>OCT-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(286.9090909090909,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">NOV-2013</text>
+                        <title>NOV-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(310,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">DEC-2013</text>
+                        <title>DEC-2013</title>
+                    </g>
+                    <g class="tick major" transform="translate(333.0909090909091,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">JAN-2014</text>
+                        <title>JAN-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(356.18181818181813,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">FEB-2014</text>
+                        <title>FEB-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(379.27272727272725,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">MAR-2014</text>
+                        <title>MAR-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(402.3636363636364,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">APR-2014</text>
+                        <title>APR-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(425.4545454545455,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">MAY-2014</text>
+                        <title>MAY-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(448.5454545454545,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">JUN-2014</text>
+                        <title>JUN-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(471.6363636363636,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">JUL-2014</text>
+                        <title>JUL-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(494.72727272727275,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">AUG-2014</text>
+                        <title>AUG-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(517.8181818181818,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">SEP-2014</text>
+                        <title>SEP-2014</title>
+                    </g>
+                    <g class="tick major" transform="translate(540.9090909090909,0)" style="opacity: 1;">
+                        <line y2="0" x2="0"></line>
+                        <text y="3" x="0" dy=".71em" transform="translate(-10,3) rotate(-65)" style="text-anchor: end; color: rgb(43, 62, 81); fill: #2b3e51;">OCT-2014</text>
+                        <title>OCT-2014</title>
+                    </g>
+                    <path class="domain" d="M56,0V0H564V0"></path>
+                </g>
+                <g class="line-container">
+                    <g class="yaxisgrid" style="display:block" transform="translate(56,0)">
+                        <g class="tick major" transform="translate(0,118.03999999999999)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 0; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(0,105.32941176470587)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(0,92.61882352941176)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(0,79.90823529411765)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(0,67.19764705882352)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(0,54.48705882352941)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(0,41.776470588235284)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(0,29.065882352941173)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(0,16.35529411764705)" style="opacity: 1;">
+                            <line x2="508" y2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px; stroke-dasharray: 10px, 2px;"></line>
+                            <text x="511" y="0" dy=".32em" style="text-anchor: start;"></text>
+                        </g>
+                        <path class="domain" d="M508,10H0V118.03999999999999H508" style="fill: none;"></path>
+                    </g>
+                    <g class="xaxisgrid" style="display:block" transform="translate(0,10)">
+                        <g class="tick major" transform="translate(79.0909090909091,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(102.18181818181819,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(125.27272727272728,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(148.36363636363637,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(171.45454545454544,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(194.54545454545456,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(217.63636363636363,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(240.72727272727272,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(263.8181818181818,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(286.9090909090909,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(310,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(333.0909090909091,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(356.18181818181813,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(379.27272727272725,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(402.3636363636364,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(425.4545454545455,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(448.5454545454545,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(471.6363636363636,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(494.72727272727275,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(517.8181818181818,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <g class="tick major" transform="translate(540.9090909090909,0)" style="opacity: 1;">
+                            <line y2="108.03999999999999" x2="0" style="stroke: #d9d9d9; opacity: 1; stroke-width: 1px;"></line>
+                            <text y="111.03999999999999" x="0" dy=".71em" style="text-anchor: middle;"></text>
+                        </g>
+                        <path class="domain" d="M56,108.03999999999999V0H564V108.03999999999999" style="fill: none;"></path>
+                    </g>
+                    <g class="aq-visits-container-all-layer-0 layer line">
+                        <path stroke="#2395ee" stroke-width="2px" fill="none" class="aq-visits-container-all-path-0" d="M79.0909090909091,38.05608141176471L102.18181818181819,61.65138188235293L125.27272727272728,111.56141317647058L148.36363636363637,112.57190494117646L171.45454545454544,118.03999999999999L194.54545454545456,118.03936447058823L217.63636363636363,118.03999999999999L240.72727272727272,118.03999999999999L263.8181818181818,118.03936447058823L286.9090909090909,118.03999999999999L310,118.03809341176469L333.0909090909091,117.4292562352941L356.18181818181813,117.5303054117647L379.27272727272725,49.268726823529406L402.3636363636364,63.46581835294116L425.4545454545455,94.86033576470588L448.5454545454545,99.80475458823528L471.6363636363636,117.43434047058823L494.72727272727275,117.23224211764705L517.8181818181818,117.44323788235293L540.9090909090909,117.5086974117647" stroke-dasharray="579.6648559570312 579.6648559570312" stroke-dashoffset="0"></path>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="79.0909090909091" cy="38.05608141176471" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="79.0909090909091" cy="38.05608141176471" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="102.18181818181819" cy="61.65138188235293" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="102.18181818181819" cy="61.65138188235293" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="125.27272727272728" cy="111.56141317647058" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="125.27272727272728" cy="111.56141317647058" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="148.36363636363637" cy="112.57190494117646" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="148.36363636363637" cy="112.57190494117646" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="171.45454545454544" cy="118.03999999999999" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="171.45454545454544" cy="118.03999999999999" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="194.54545454545456" cy="118.03936447058823" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="194.54545454545456" cy="118.03936447058823" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="217.63636363636363" cy="118.03999999999999" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="217.63636363636363" cy="118.03999999999999" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="240.72727272727272" cy="118.03999999999999" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="240.72727272727272" cy="118.03999999999999" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="263.8181818181818" cy="118.03936447058823" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="263.8181818181818" cy="118.03936447058823" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="286.9090909090909" cy="118.03999999999999" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="286.9090909090909" cy="118.03999999999999" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="310" cy="118.03809341176469" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="310" cy="118.03809341176469" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="333.0909090909091" cy="117.4292562352941" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="333.0909090909091" cy="117.4292562352941" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="356.18181818181813" cy="117.5303054117647" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="356.18181818181813" cy="117.5303054117647" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="379.27272727272725" cy="49.268726823529406" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="379.27272727272725" cy="49.268726823529406" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="402.3636363636364" cy="63.46581835294116" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="402.3636363636364" cy="63.46581835294116" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="425.4545454545455" cy="94.86033576470588" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="425.4545454545455" cy="94.86033576470588" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="448.5454545454545" cy="99.80475458823528" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="448.5454545454545" cy="99.80475458823528" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="471.6363636363636" cy="117.43434047058823" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="471.6363636363636" cy="117.43434047058823" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="494.72727272727275" cy="117.23224211764705" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="494.72727272727275" cy="117.23224211764705" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="517.8181818181818" cy="117.44323788235293" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="517.8181818181818" cy="117.44323788235293" isDrillable="false"></circle>
+                        </g>
+                        <g class="point-holder">
+                            <circle class="points" stroke="#2395ee" fill="#ffffff" r="3" cx="540.9090909090909" cy="117.5086974117647" isDrillable="false" stroke-width="1px"></circle>
+                            <circle class="touch-points" fill="rgba(100,100,100,0)" r="5" cx="540.9090909090909" cy="117.5086974117647" isDrillable="false"></circle>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+			<!-- Call printSVG() to print the SVG on click of this button-->
+            <input type="submit" class="ignore-print btn" onclick="printSVG()" value="Print SVG"></input>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

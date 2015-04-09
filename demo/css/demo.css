@@ -1,0 +1,61 @@
+html,
+body {
+    height: 99%;
+}
+
+#container {
+    height: 100%;
+}
+
+#container h2 {
+    width: 60%;
+    float: left;
+}
+
+.top {
+    width: 80%;
+    height: 50%;
+}
+
+#left-section {
+    width: 45%;
+    height: 45%;
+    float: left;
+}
+
+.img {
+    height: 90%;
+    width: 100%;
+    background-image: url(../image/download.png);
+    background-repeat: no-repeat;
+	border: 1px solid;
+}
+
+#right-section {
+    width: 45%;
+    height: 45%;
+    float: left;
+}
+
+.text-block {
+    height: 89%;
+	border: 1px solid;
+	margin-left: 5px;
+	text-align: center;
+}
+
+#bottom {
+    height: 45%;
+    width: 50%;
+}
+
+.btn {
+    background: transparent;
+    height: 30px;
+    width: 135px;
+    background-color: rgb(37, 34, 43);
+    color: white;
+}
+svg{
+border: 1px solid;
+}
