@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>JSDoc: Home</title>
+
+        <script src="scripts/prettify/prettify.js"></script>
+        <script src="scripts/prettify/lang-css.js"></script>
+        <!--[if lt IE 9]>
+          <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+        <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    </head>
+
+    <body>
+
+        <div id="main" style="width:85%">
+
+
+            <section>
+                <article><h1 style="margin-left: 0;">PrintPage</h1><p>This is a plugin which helps to print a specific area in a web page.</p>
+                    <h4>Version:</h4><p>1.0</p>
+                    <h4>Author:</h4><p>abdulkhaderp (Abdul khader P)</p>
+                    <h4>Dependency:</h4><p>jquery-2.1.1.js</p>
+                    <h3>Usage</h3><pre class="prettyprint source"><code>$("#element").printPage({
+    applyStyles  : true,
+    ignoreId     : "no-print",
+    ignoreClass  : "no-print",
+    styleSheet   : "path/file.css",
+    appendTop    : "someText",
+    appendBottom : "someText"
+});</code></pre>
+                   
+                    
+                    <h3>Parameters</h3>
+                    <table class="params" style=" width: 100%; ">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th class="last">Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="name"><code>applyStyles</code></td>
+                                <td class="type">
+                                    <span class="param-type">Boolean</span>
+                                </td>
+                                <td class="description last">This value decides whether it is needed to copy the computed
+                                styles of each node of the element while printing.</td>
+                            </tr>
+                             <tr>
+                                <td class="name"><code>ignoreId</code></td>
+                                <td class="type">
+                                    <span class="param-type">String</span>
+                                </td>
+                                <td class="description last">If id selector of an element is given for ignoreId, that element will be ignored while printing.</td>
+                            </tr>
+                             <tr>
+                                <td class="name"><code>ignoreClass</code></td>
+                                <td class="type">
+                                    <span class="param-type">String</span>
+                                </td>
+                                <td class="description last">If class selector of an element is given for ignoreClass, the element(s) with the class will be ignored while printing.</td>
+                            </tr>
+                            <tr>
+                                <td class="name"><code>styleSheet</code></td>
+                                <td class="type">
+                                    <span class="param-type">String</span>
+                                </td>
+                                <td class="description last">To include an external stylesheet for applying styles. The path
+                                of the desired file is expected here.</td>
+                            </tr>
+                            <tr>
+                                <td class="name"><code>appendTop</code></td>
+                                <td class="type">
+                                    <span class="param-type">String</span>
+                                </td>
+                                <td class="description last">If a text is given for appendTop, that will be appended as a header text.</td>
+                            </tr>
+                            <tr>
+                                <td class="name"><code>appendBottom</code></td>
+                                <td class="type">
+                                    <span class="param-type">String</span>
+                                </td>
+                                <td class="description last">If a text is given for appendBottom, that will be appended as a footer text.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h3>applyStyles</h3>
+                    <p>This parameter decides whether to copy the applied styles (computed styles) on the element. If the applyStyles is set false, then the computed styles of each node of the element will be ignored while printing.</p>
+                    <code>Default Value : true</code><p>
+                    <code>Expected Value: true or false</code>
+
+                    <h3>ignoreId</h3>
+                    <p>This parameter expects an id selector of an element. If given, that element will be ignored while printing.</p>
+                    <code>Default Value : null</code><p>
+                        <code>Expected Value: id selector of an element</code>
+
+                    <h3>ignoreClass</h3>
+                    <p>This parameter expects a class selector of an element. If given, the element(s) with the class will be ignored while printing.</p>
+                    <code>Default Value : null</code><p>
+                    <code>Expected Value: class selector of an element</code>
+
+                    <h3>styleSheet</h3>
+                    <p>This parameter is used to include an external stylesheet into the iframe for applying styles. While using external styleSheet, it is recommended to set applyStyles as false (Otherwise, the inline computed styles will
+                        override the styles from the external stylesheet).</p>
+                    <code>Default Value : null</code><p>
+                    <code>Expected Value: link to a stylesheet</code>
+
+                    <h3>appendTop</h3>
+                    <p>This parameter is used to append a header text for the element while printing.</p>
+                    <code>Default Value : null</code><p>
+                    <code>Expected Value: string </code>
+
+                    <h3>appendBottom</h3>
+                    <p>This parameter is used to append a footer text for the element while printing.</p>
+                    <code>Default Value : null</code><p>
+                    <code>Expected Value: string </code>
+                    <hr>
+                    <h2>Browser Support</h2>
+                    <p>Chrome, Mozilla firefox</p>
+
+
+                    <h2>License</h2><p>The MIT License (MIT)</p>
+                    <p>Copyright (c) 2015 abdulkhaderp</p>
+                    <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+                        of this software and associated documentation files (the &quot;Software&quot;), to deal
+                        in the Software without restriction, including without limitation the rights
+                        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                        copies of the Software, and to permit persons to whom the Software is
+                        furnished to do so, subject to the following conditions:</p>
+                    <p>The above copyright notice and this permission notice shall be included in all
+                        copies or substantial portions of the Software.</p>
+                    <p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                        SOFTWARE.</p></article>
+            </section>
+
+
+
+
+
+
+        </div>
+        <!--
+        <nav>
+            <h2><a href="myindex.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Callout.html">PrintWeb</a></li></ul>
+        </nav>
+        
+        <br class="clear">
+        
+        <footer>
+            Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0-dev</a> on Sun Mar 08 2015 21:54:23 GMT+0530 (IST)
+        </footer>
+        -->
+        <script> prettyPrint();</script>
+        <script src="scripts/linenumber.js"></script>
+    </body>
+</html>

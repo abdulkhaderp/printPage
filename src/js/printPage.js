@@ -147,7 +147,7 @@
             $(iframe.contentWindow.document.head).append('<link rel="stylesheet" href=' + _settings.styleSheet + '>');
         }
         /* Print the contents of the iFrame.
-           To handle asynchronous execution,100ms delay is applied for the print call. 
+            
         */
         setTimeout(function() {
             iframe.contentWindow.print();
